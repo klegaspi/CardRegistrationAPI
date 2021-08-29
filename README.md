@@ -9,7 +9,7 @@
 1. Open CardRegistrationAPI.sln solution
 2. In Package Manager Console, Run update-data from Infrastructure project
 
-# Starting Rest API
+# Start Rest API
 1. Open CardRegistrationAPI.sln solution.
 2. Click F5 to start the API service.
 
