@@ -18,21 +18,22 @@
 Note: replace port number in base url
 
 Get cards for user:
-HttpGet
-https://localhost:44388/api/v1/users/{userid}/cards
+- HttpGet
+- https://localhost:44388/api/v1/users/{userid}/cards
 
 Get all cards:
-HttpGet
-https://localhost:44388/api/v1/cards
+- HttpGet
+- https://localhost:44388/api/v1/cards
 
 Get single card for user:
-HttpGet
-https://localhost:44388/api/v1/users/{userId}/cards/{cardId}
+- HttpGet
+- https://localhost:44388/api/v1/users/{userId}/cards/{cardId}
 
 create card:
-HttpPost
-https://localhost:44388/api/v1/users/{userId}/cards
-sample payload
+- HttpPost
+- https://localhost:44388/api/v1/users/{userId}/cards
+- sample payload
+```
 {
  "cardNumber": 4012888888881881,
  "cvc": 123,
@@ -40,37 +41,33 @@ sample payload
  "expiryYear": 2022,
  "userId": 3
 }
+```
 
 ## Technologies used
 
-Dot Net Framework 3.1
-
-Clean Code Architecture
-CQRS
-MediatR
-EF Core
-SQL Server
-Docker
-EF Core Migration
-Dependency Injection
-SOLID
-CreditCardValidator
+- Dot Net Framework 3.1
+- Clean Code Architecture
+- CQRS
+- MediatR
+- EF Core
+- SQL Server
+- Docker
+- EF Core Migration
+- Dependency Injection
+- SOLID
+- CreditCardValidator
 
 Integration tests:
-xUnit
-FluentAssertion
-EF In Memory DB
-Microsoft.NET.Test.Sdk
-microsoft.aspnetcore.mvc.testing
-xunit.runner.visualstudio
+- xUnit
+- FluentAssertion
+- EF In Memory DB
+- microsoft.aspnetcore.mvc.testing
 
 
 Unit tests:
-xUnit
-Moq
-FluentAssertion
-Microsoft.NET.Test.Sdk
-microsoft.aspnetcore.mvc.testing
-xunit.runner.visualstudio
+- xUnit
+- Moq
+- FluentAssertion
+- Microsoft.NET.Test.Sdk
 
 
