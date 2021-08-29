@@ -41,4 +41,36 @@ sample payload
  "userId": 3
 }
 
+## Technologies used
+
+Dot Net Framework 3.1
+
+Clean Code Architecture
+CQRS
+MediatR
+EF Core
+SQL Server
+Docker
+EF Core Migration
+Dependency Injection
+SOLID
+CreditCardValidator
+
+Integration tests:
+xUnit
+FluentAssertion
+EF In Memory DB
+Microsoft.NET.Test.Sdk
+microsoft.aspnetcore.mvc.testing
+xunit.runner.visualstudio
+
+
+Unit tests:
+xUnit
+Moq
+FluentAssertion
+Microsoft.NET.Test.Sdk
+microsoft.aspnetcore.mvc.testing
+xunit.runner.visualstudio
+
 
