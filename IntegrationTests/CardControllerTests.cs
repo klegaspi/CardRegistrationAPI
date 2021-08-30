@@ -18,7 +18,7 @@ namespace IntegrationTests
         public async Task GetSingleCardForUser_WithCard_ReturnsSuccess()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
             var cardId = 1;
 
             //Act
@@ -81,7 +81,7 @@ namespace IntegrationTests
         public async Task GetSingleCardForUser_CardIdIsNotExisting_ReturnsNotFound()
         {
             //Arrange
-            var nonExistingUserId = 1;
+            var nonExistingUserId = 1000;
             var cardId = 1000;
 
             //Act
@@ -95,7 +95,7 @@ namespace IntegrationTests
         public async Task GetSingleCardForUser_CardIdIsZero_ReturnsBadRequest()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
             var cardId = 0;
 
             //Act
@@ -109,7 +109,7 @@ namespace IntegrationTests
         public async Task GetSingleCardForUser_CardIdIsNegative_ReturnsBadRequest()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
             var cardId = -1;
 
             //Act
@@ -126,7 +126,7 @@ namespace IntegrationTests
         public async Task GetCardsForUser_WithData_ReturnsSuccess()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
 
             //Act
             var response = await TestClient.GetAsync($"/api/v1/users/{userId}/cards");
@@ -203,7 +203,7 @@ namespace IntegrationTests
         public async Task CreateCardForUser_Returns201StatusCode()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
 
             //Act
             var payload = new CreateCardDto
@@ -226,7 +226,7 @@ namespace IntegrationTests
         public async Task CreateCardForUser_InvalidCreditCardNumber_ReturnsBadRequest()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
 
             //Act
             var payload = new CreateCardDto
@@ -249,7 +249,7 @@ namespace IntegrationTests
         public async Task CreateCardForUser_InvalidCVC_ReturnsBadRequest()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
 
             //Act
             var payload = new CreateCardDto
@@ -272,7 +272,7 @@ namespace IntegrationTests
         public async Task CreateCardForUser_InvalidExpiryMonth_ReturnsBadRequest()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
 
             //Act
             var payload = new CreateCardDto
@@ -295,7 +295,7 @@ namespace IntegrationTests
         public async Task CreateCardForUser_InvalidExpiryYear_ReturnsBadRequest()
         {
             //Arrange
-            var userId = 1;
+            var userId = 1000;
 
             //Act
             var payload = new CreateCardDto
