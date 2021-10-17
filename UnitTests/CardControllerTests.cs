@@ -354,7 +354,7 @@ namespace UnitTests
             //Assert
             var okResult = (OkObjectResult)result.Result;
             var actual = (List<GetCardDto>)okResult.Value;
-            actual.Count.Should().Be(0);
+            actual.Count.Should().Be(1);
         }
         #endregion
     }
