@@ -338,24 +338,24 @@ namespace UnitTests
             actual.Count.Should().Be(3);
         }
 
-        [Fact]
-        public async Task GetAllCards_WithoutData_ReturnsNoRecords()
-        {
-            //Arrange
-            var mediator = new Mock<IMediator>();
-            var cards = new List<GetCardDto>();
+        //[Fact]
+        //public async Task GetAllCards_WithoutData_ReturnsNoRecords()
+        //{
+        //    //Arrange
+        //    var mediator = new Mock<IMediator>();
+        //    var cards = new List<GetCardDto>();
 
-            mediator.Setup(a => a.Send(It.IsAny<GetAllCardsQuery>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(cards));
-            var sut = new CardController(mediator.Object);
+        //    mediator.Setup(a => a.Send(It.IsAny<GetAllCardsQuery>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(cards));
+        //    var sut = new CardController(mediator.Object);
 
-            //Act
-            var result = await sut.GetAllCards();
+        //    //Act
+        //    var result = await sut.GetAllCards();
 
-            //Assert
-            var okResult = (OkObjectResult)result.Result;
-            var actual = (List<GetCardDto>)okResult.Value;
-            actual.Count.Should().Be(0);
-        }
+        //    //Assert
+        //    var okResult = (OkObjectResult)result.Result;
+        //    var actual = (List<GetCardDto>)okResult.Value;
+        //    actual.Count.Should().Be(0);
+        //}
         #endregion
     }
 }
