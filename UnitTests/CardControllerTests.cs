@@ -290,72 +290,72 @@ namespace UnitTests
         #endregion
 
         #region GetAllCards tests
-        //[Fact]
-        //public async Task GetAllCards_WithData_Returns200StatusCode()
-        //{
-        //    //Arrange
-        //    var mediator = new Mock<IMediator>();
-        //    var cards = new List<GetCardDto>
-        //    {
-        //        new GetCardDto {
-        //            CardId = 100,
-        //            CardNumber = 5555555555554444,
-        //            CVC = 123,
-        //            ExpiryMonth = 12,
-        //            ExpiryYear = 2025,
-        //            Name = "Jane",
-        //            UserId = 1
-        //        },
-        //        new GetCardDto {
-        //            CardId = 101,
-        //            CardNumber = 5105105105105100,
-        //            CVC = 113,
-        //            ExpiryMonth = 9,
-        //            ExpiryYear = 2025,
-        //            Name = "Jane",
-        //            UserId = 1
-        //        },
-        //        new GetCardDto {
-        //            CardId = 101,
-        //            CardNumber = 5555555555554444,
-        //            CVC = 878,
-        //            ExpiryMonth = 5,
-        //            ExpiryYear = 2027,
-        //            Name = "Kristian",
-        //            UserId = 2
-        //        }
-        //    };
+        [Fact]
+        public async Task GetAllCards_WithData_Returns200StatusCode()
+        {
+            //Arrange
+            var mediator = new Mock<IMediator>();
+            var cards = new List<GetCardDto>
+            {
+                new GetCardDto {
+                    CardId = 100,
+                    CardNumber = 5555555555554444,
+                    CVC = 123,
+                    ExpiryMonth = 12,
+                    ExpiryYear = 2025,
+                    Name = "Jane",
+                    UserId = 1
+                },
+                new GetCardDto {
+                    CardId = 101,
+                    CardNumber = 5105105105105100,
+                    CVC = 113,
+                    ExpiryMonth = 9,
+                    ExpiryYear = 2025,
+                    Name = "Jane",
+                    UserId = 1
+                },
+                new GetCardDto {
+                    CardId = 101,
+                    CardNumber = 5555555555554444,
+                    CVC = 878,
+                    ExpiryMonth = 5,
+                    ExpiryYear = 2027,
+                    Name = "Kristian",
+                    UserId = 2
+                }
+            };
 
-        //    mediator.Setup(a => a.Send(It.IsAny<GetAllCardsQuery>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(cards));
-        //    var sut = new CardController(mediator.Object);
+            mediator.Setup(a => a.Send(It.IsAny<GetAllCardsQuery>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(cards));
+            var sut = new CardController(mediator.Object);
 
-        //    //Act
-        //    var result = await sut.GetAllCards();
+            //Act
+            var result = await sut.GetAllCards();
 
-        //    //Assert
-        //    var okResult = (OkObjectResult)result.Result;
-        //    var actual = (List<GetCardDto>)okResult.Value;
-        //    actual.Count.Should().Be(3);
-        //}
+            //Assert
+            var okResult = (OkObjectResult)result.Result;
+            var actual = (List<GetCardDto>)okResult.Value;
+            actual.Count.Should().Be(3);
+        }
 
-        //[Fact]
-        //public async Task GetAllCards_WithoutData_ReturnsNoRecords()
-        //{
-        //    //Arrange
-        //    var mediator = new Mock<IMediator>();
-        //    var cards = new List<GetCardDto>();
+        [Fact]
+        public async Task GetAllCards_WithoutData_ReturnsNoRecords()
+        {
+            //Arrange
+            var mediator = new Mock<IMediator>();
+            var cards = new List<GetCardDto>();
 
-        //    mediator.Setup(a => a.Send(It.IsAny<GetAllCardsQuery>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(cards));
-        //    var sut = new CardController(mediator.Object);
+            mediator.Setup(a => a.Send(It.IsAny<GetAllCardsQuery>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(cards));
+            var sut = new CardController(mediator.Object);
 
-        //    //Act
-        //    var result = await sut.GetAllCards();
+            //Act
+            var result = await sut.GetAllCards();
 
-        //    //Assert
-        //    var okResult = (OkObjectResult)result.Result;
-        //    var actual = (List<GetCardDto>)okResult.Value;
-        //    actual.Count.Should().Be(0);
-        //}
+            //Assert
+            var okResult = (OkObjectResult)result.Result;
+            var actual = (List<GetCardDto>)okResult.Value;
+            actual.Count.Should().Be(0);
+        }
         #endregion
     }
 }
